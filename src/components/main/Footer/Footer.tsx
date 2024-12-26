@@ -14,10 +14,10 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className=" py-8">
-      <div className="container mx-auto text-center">
+    <footer className="py-8">
+      <div className="container mx-auto text-center px-4">
         <p className="text-sm">
-          Built with 💖 by{" "}
+          Developed with 💖 by{" "}
           <a
             href="https://github.com/navoditbharat"
             target="_blank"
@@ -27,15 +27,15 @@ export default function Footer() {
             Navodit Bharat
           </a>
         </p>
-        <ul className="flex justify-center space-x-4 mt-4">
+        <ul className="flex flex-wrap justify-center gap-4 mt-4">
           {socialLinks.map((link) => (
             <li key={link.name}>
-              <Button asChild variant="outline">
+              <Button asChild variant="outline" className="w-full sm:w-auto">
                 <a
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2"
+                  className="flex items-center justify-center space-x-2"
                 >
                   <span>{link.icon}</span>
                   <span>{link.name}</span>

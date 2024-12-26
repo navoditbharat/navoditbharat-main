@@ -15,9 +15,9 @@ export default function Home() {
           href="https://www.upwork.com/en-gb/freelancers/~0153f79cc9e470e0cd"
         />
       </Head>
-      <nav className="flex justify-center m-4 ">
-        <Navbar />
-      </nav>
+
+      <Navbar />
+
       <main className="flex justify-center items-center h-screen">
         <div className="text-center">Coming Soon...</div>
       </main>
