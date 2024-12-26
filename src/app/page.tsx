@@ -21,9 +21,8 @@ export default function Home() {
       <main className="flex justify-center items-center h-screen">
         <div className="text-center">Coming Soon...</div>
       </main>
-      <footer>
-        <Footer />
-      </footer>
+
+      <Footer />
     </>
   );
 }
