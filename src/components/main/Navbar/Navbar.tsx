@@ -18,7 +18,7 @@ import { components } from "./navbarHelpers";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="flex items-center justify-center p-4">
+    <div className="flex items-center justify-center p-1 w-fit border border-primary/10 rounded-2xl">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>

@@ -17,6 +17,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Navodit Bharat",
   description: "Portfolio of Navodit Bharat",
+
+  metadataBase: new URL("http://navoditbharat.com/"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Navodit Bharat",
+    description:
+      "Software Engineer | Full-Stack Developer | React, Node.js, TypeScript Expert | Sharing Insights on Web Development, JavaScript Ecosystem, and Scalable Architecture.",
+    url: "http://navoditbharat.com/",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary",
+    title: "Navodit Bharat",
+    description:
+      "Software Engineer | Full-Stack Developer | React, Node.js, TypeScript Expert | Sharing Insights on Web Development, JavaScript Ecosystem, and Scalable Architecture.",
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="nhj" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
