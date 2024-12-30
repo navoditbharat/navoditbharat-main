@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "https://drive.google.com/uc?export=view&id=1lEW9YhR0r5jq3On8OlnYzbQFpO-AJ0UG",
+        url: "https://i.imgur.com/ewTvBgc.png",
         width: 1200,
         height: 630,
         alt: "Navodit Bharat",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Navodit Bharat",
     images: [
       {
-        url: "https://drive.google.com/uc?export=view&id=1lEW9YhR0r5jq3On8OlnYzbQFpO-AJ0UG",
+        url: "https://i.imgur.com/ewTvBgc.png",
         width: 1200,
         height: 630,
         alt: "Navodit Bharat",
