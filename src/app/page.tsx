@@ -1,12 +1,11 @@
 "use client";
 import Head from "next/head";
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 
 import Footer from "@/components/main/Footer/Footer";
 import { LoadingScreen } from "@/components/main/loading/LoadingScreen";
 import Navbar from "@/components/main/Navbar/Navbar";
-import { AnimatePresence, motion } from "motion/react";
-import { audioPlayer } from "@/utils/audio";
 import { SoundButton } from "@/components/main/soundbutton";
 
 export default function Home() {
@@ -38,7 +37,7 @@ export default function Home() {
             key="content"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.75, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
           >
             <Navbar />
             <main className="flex justify-center items-center h-screen">

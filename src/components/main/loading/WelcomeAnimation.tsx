@@ -1,14 +1,16 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+
 import { welcomeTexts } from "@/utils/welcome-texts";
-import { audioPlayer } from "@/utils/audio";
 
 interface WelcomeAnimationProps {
   onComplete: () => void;
 }
 
 export function WelcomeAnimation({ onComplete }: WelcomeAnimationProps) {
+  const { theme } = useTheme();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
@@ -19,7 +21,7 @@ export function WelcomeAnimation({ onComplete }: WelcomeAnimationProps) {
       } else if (!isComplete) {
         setIsComplete(true);
         clearInterval(interval);
-        setTimeout(onComplete, 800);
+        setTimeout(onComplete, 1000);
       }
     }, 500);
 
@@ -37,7 +39,11 @@ export function WelcomeAnimation({ onComplete }: WelcomeAnimationProps) {
           transition={{ duration: 0.3 }}
           className="text-center"
         >
-          <h1 className="text-6xl md:text-8xl font-bold text-white">
+          <h1
+            className={`text-6xl md:text-8xl font-bold ${
+              theme === "dark" ? "text-white" : "text-black"
+            }`}
+          >
             {welcomeTexts[currentIndex].text}
           </h1>
         </motion.div>
