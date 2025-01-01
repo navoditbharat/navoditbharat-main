@@ -1,8 +1,23 @@
-import Footer from "@/components/main/Footer/Footer";
-import Navbar from "@/components/main/Navbar/Navbar";
+"use client";
 import Head from "next/head";
+import { useState } from "react";
+
+import Footer from "@/components/main/Footer/Footer";
+import { LoadingScreen } from "@/components/main/loading/LoadingScreen";
+import Navbar from "@/components/main/Navbar/Navbar";
+import { AnimatePresence, motion } from "motion/react";
+import { audioPlayer } from "@/utils/audio";
+import { SoundButton } from "@/components/main/soundbutton";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const [showSound, setShowSound] = useState(false);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+    setTimeout(() => setShowSound(true), 1000); // Show sound button after transition
+  };
+
   return (
     <>
       <Head>
@@ -15,14 +30,25 @@ export default function Home() {
           href="https://www.upwork.com/en-gb/freelancers/~0153f79cc9e470e0cd"
         />
       </Head>
-
-      <Navbar />
-
-      <main className="flex justify-center items-center h-screen">
-        <div className="text-center">Coming Soon...</div>
-      </main>
-
-      <Footer />
+      <AnimatePresence mode="wait">
+        {loading ? (
+          <LoadingScreen key="loading" onComplete={handleLoadingComplete} />
+        ) : (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.75, ease: "easeInOut" }}
+          >
+            <Navbar />
+            <main className="flex justify-center items-center h-screen">
+              <div className="text-center">Coming Soon...</div>
+            </main>
+            <Footer />
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {showSound && <SoundButton />}
     </>
   );
 }

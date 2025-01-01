@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 import { Button } from "@/components/ui/button";
 
 const socialLinks = [
@@ -14,7 +16,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="py-8">
+    <motion.footer initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <div className="container mx-auto text-center px-4">
         <p className="text-sm">
           Developed with 💖 by{" "}
@@ -45,6 +47,6 @@ export default function Footer() {
           ))}
         </ul>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

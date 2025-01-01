@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import {
   NavigationMenu,
@@ -19,7 +20,11 @@ import { components } from "./navbarHelpers";
 const Navbar: React.FC = () => {
   return (
     <nav className="flex justify-center m-4 ">
-      <div className="flex items-center justify-center p-1 w-fit border border-primary/10 rounded-2xl">
+      <motion.div
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        className="fixed top-2 flex items-center justify-center p-1 w-fit border border-primary/10 rounded-2xl bg-background/80 backdrop-blur-sm z-50 border-b"
+      >
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -49,7 +54,7 @@ const Navbar: React.FC = () => {
             <ToggleMenuItem />
           </NavigationMenuList>
         </NavigationMenu>
-      </div>
+      </motion.div>
     </nav>
   );
 };
