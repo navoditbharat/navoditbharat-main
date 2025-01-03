@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero: React.FC = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-start justify-between px-6 mt-12 md:px-12">
+    <section className="flex flex-col-reverse md:flex-row items-start justify-between">
       {/* Left Content */}
       <div className="md:w-1/2 space-y-6 text-left">
         <motion.h1

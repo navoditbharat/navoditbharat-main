@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { motion } from "framer-motion";
@@ -26,13 +27,13 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex space-x-6">
           <div className="flex space-x-6">
             <a
-              href="#home"
+              href="/#home"
               className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
             >
               Home
             </a>
             <a
-              href="#about"
+              href="/about"
               className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
             >
               About
