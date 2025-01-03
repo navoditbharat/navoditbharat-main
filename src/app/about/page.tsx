@@ -6,22 +6,22 @@ const AboutPage = () => {
       <div className="container mx-auto px-4 max-w-3xl">
         <h1 className="text-3xl font-bold mb-4">About Navodit Bharat</h1>
         <p className="mb-4">
-          Hello! I'm <strong>Navodit Bharat</strong>, a passionate software
+          Hello! I&apos;m <strong>Navodit Bharat</strong>, a passionate software
           engineer with a focus on building user-friendly applications and
           designing scalable systems. I have expertise in technologies such as
           JavaScript, React, Node.js, TypeScript, and more.
         </p>
 
         <p className="mb-4">
-          Over the years, I've worked on various exciting projects, including
-          web and mobile apps, server-side applications, and distributed
-          systems. I'm always eager to learn and grow in the tech field, and I
-          thrive in environments where I can solve complex problems with clean
-          and efficient code.
+          Over the years, I&apos;ve worked on various exciting projects,
+          including web and mobile apps, server-side applications, and
+          distributed systems. I&apos;m always eager to learn and grow in the
+          tech field, and I thrive in environments where I can solve complex
+          problems with clean and efficient code.
         </p>
 
         <p className="mb-4">
-          When I'm not coding, you can find me exploring new technologies,
+          When I&apos;m not coding, you can find me exploring new technologies,
           attending meetups, or sharing my knowledge with others through
           tutorials and blog posts. I believe in continuous improvement and
           enjoy helping others reach their full potential.

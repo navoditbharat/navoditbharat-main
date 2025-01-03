@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
@@ -26,18 +27,18 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation Menu */}
         <div className="hidden md:flex space-x-6">
           <div className="flex space-x-6">
-            <a
+            <Link
               href="/#home"
               className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="/about"
               className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
             >
               About
-            </a>
+            </Link>
             <a
               href="#projects"
               className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
@@ -74,12 +75,12 @@ const Navbar: React.FC = () => {
           exit={{ opacity: 0, y: 20 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         >
-          <a href="#home" onClick={() => setIsMenuOpen(false)}>
+          <Link href="/" onClick={() => setIsMenuOpen(false)}>
             Home
-          </a>
-          <a href="#about" onClick={() => setIsMenuOpen(false)}>
+          </Link>
+          <Link href="/about" onClick={() => setIsMenuOpen(false)}>
             About
-          </a>
+          </Link>
           <a href="#projects" onClick={() => setIsMenuOpen(false)}>
             Projects
           </a>
