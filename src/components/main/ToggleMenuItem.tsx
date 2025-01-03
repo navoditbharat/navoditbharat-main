@@ -18,7 +18,7 @@ const ToggleMenuItem: React.FC = () => {
       whileHover={{ scale: 1.1 }}
       className={
         buttonVariants({ variant: "ghost", size: "icon" }) +
-        " fixed bottom-8 right-8 p-4 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
+        " fixed bottom-8 right-8 p-4 rounded-full"
       }
       onClick={toggleTheme}
     >
