@@ -16,7 +16,11 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <motion.footer initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <motion.footer
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="m-4"
+    >
       <div className="container mx-auto text-center px-4">
         <p className="text-sm">
           Developed with 💖 by{" "}

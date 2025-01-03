@@ -7,6 +7,8 @@ import { LoadingScreen } from "@/components/main/loading/LoadingScreen";
 import Navbar from "@/components/main/Navbar/Navbar";
 import Hero from "@/components/main/hero/Hero";
 import ToggleMenuItem from "@/components/main/ToggleMenuItem";
+import LifeJourney from "@/components/main/Experiance/LifeJourney";
+import Footer from "@/components/main/Footer/Footer";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -39,10 +41,12 @@ export default function Home() {
           >
             <Navbar />
             <main className="flex justify-center items-center ">
-              {/* <LifeJourney /> */}
               <Hero />
             </main>
-            {/* <Footer /> */}
+            <div>
+              <LifeJourney />
+            </div>
+            <Footer />
           </motion.div>
         )}
       </AnimatePresence>
