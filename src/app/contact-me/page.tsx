@@ -16,7 +16,7 @@ export default function ContactPage() {
           <div className="container mx-auto max-w-lg py-10 text-center">
             <h1 className="text-2xl font-bold mb-4">Thank You!</h1>
             <p className="text-gray-600">
-              Your message has been sent successfully. I'll get back to you
+              Your message has been sent successfully. I&apos;ll get back to you
               soon.
             </p>
           </div>
