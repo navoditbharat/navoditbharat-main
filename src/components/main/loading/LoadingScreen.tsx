@@ -2,15 +2,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 import { WelcomeAnimation } from "./WelcomeAnimation";
-import { useTheme } from "next-themes";
 
 interface LoadingScreenProps {
   onComplete: () => void;
 }
 
 export function LoadingScreen({ onComplete }: LoadingScreenProps) {
-  const { theme } = useTheme();
-
   return (
     <AnimatePresence>
       <motion.div
