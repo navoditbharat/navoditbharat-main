@@ -45,12 +45,12 @@ const Navbar: React.FC = () => {
             >
               Projects
             </a>
-            <a
-              href="#contact"
+            <Link
+              href="/contact-me"
               className="text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -84,9 +84,9 @@ const Navbar: React.FC = () => {
           <a href="#projects" onClick={() => setIsMenuOpen(false)}>
             Projects
           </a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+          <Link href="/contact-me" onClick={() => setIsMenuOpen(false)}>
             Contact
-          </a>
+          </Link>
         </motion.div>
       )}
     </header>
