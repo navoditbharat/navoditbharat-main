@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Navodit Bharat",
-  description: "Portfolio of Navodit Bharat",
+  title: "Navodit Bharat - Personal Website | Software Engineer & Developer",
+  description: "Personal Website of Navodit Bharat",
   keywords: [
     "Navodit Bharat",
     "Full-Stack Developer",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Navodit Bharat",
+    title: "Navodit Bharat - Personal Website | Software Engineer & Developer",
     description:
       "Software Engineer | Full-Stack Developer | React, Node.js, TypeScript Expert | Sharing Insights on Web Development, JavaScript Ecosystem, and Scalable Architecture.",
     url: "http://navoditbharat.com/",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Navodit Bharat",
+    title: "Navodit Bharat - Personal Website | Software Engineer & Developer",
     images: [
       {
         url: "https://i.imgur.com/Zhz0R1z.jpeg",
