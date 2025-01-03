@@ -3,18 +3,16 @@ import Head from "next/head";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
-import Footer from "@/components/main/Footer/Footer";
 import { LoadingScreen } from "@/components/main/loading/LoadingScreen";
 import Navbar from "@/components/main/Navbar/Navbar";
-import { SoundButton } from "@/components/main/soundbutton";
+import Hero from "@/components/main/hero/Hero";
+import ToggleMenuItem from "@/components/main/ToggleMenuItem";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const [showSound, setShowSound] = useState(false);
 
   const handleLoadingComplete = () => {
     setLoading(false);
-    setTimeout(() => setShowSound(true), 1000); // Show sound button after transition
   };
 
   return (
@@ -40,14 +38,15 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeInOut" }}
           >
             <Navbar />
-            <main className="flex justify-center items-center h-screen">
-              <div className="text-center">Coming Soon...</div>
+            <main className="flex justify-center items-center ">
+              {/* <LifeJourney /> */}
+              <Hero />
             </main>
-            <Footer />
+            {/* <Footer /> */}
           </motion.div>
         )}
       </AnimatePresence>
-      {showSound && <SoundButton />}
+      <ToggleMenuItem />
     </>
   );
 }

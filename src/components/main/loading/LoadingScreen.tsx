@@ -17,9 +17,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
         initial={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.75, ease: "easeInOut" }}
-        className={`fixed inset-0 z-50 min-h-screen flex items-center justify-center overflow-hidden ${
-          theme === "dark" ? "bg-black" : "bg-white"
-        }`}
+        className={`fixed inset-0 z-50 min-h-screen flex items-center justify-center overflow-hidden`}
       >
         <WelcomeAnimation onComplete={onComplete} />
       </motion.div>
