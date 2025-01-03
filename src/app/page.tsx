@@ -1,9 +1,9 @@
 "use client";
 import Head from "next/head";
-import { motion } from "motion/react";
+import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 
 import { LoadingScreen } from "@/components/main/loading/LoadingScreen";
-import Navbar from "@/components/main/Navbar/Navbar";
 import Hero from "@/components/main/hero/Hero";
 import ToggleMenuItem from "@/components/main/ToggleMenuItem";
 import LifeJourney from "@/components/main/Experiance/LifeJourney";
@@ -11,6 +11,12 @@ import Footer from "@/components/main/Footer/Footer";
 import MainLayout from "@/components/main/MainLayout";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
+
   return (
     <>
       <Head>
@@ -23,16 +29,29 @@ export default function Home() {
           href="https://www.upwork.com/en-gb/freelancers/~0153f79cc9e470e0cd"
         />
       </Head>
-
-      <MainLayout>
-        <main className="flex justify-center items-center ">
-          <Hero />
-        </main>
-        <div>
-          <LifeJourney />
-        </div>
-        <Footer />
-      </MainLayout>
+      <AnimatePresence mode="wait">
+        {loading ? (
+          <LoadingScreen key="loading" onComplete={handleLoadingComplete} />
+        ) : (
+          <MainLayout>
+            <motion.div
+              key="content"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
+              <main className="flex justify-center items-center ">
+                <Hero />
+              </main>
+              <div>
+                <LifeJourney />
+              </div>
+              <Footer />
+            </motion.div>
+          </MainLayout>
+        )}
+      </AnimatePresence>
+      <ToggleMenuItem />
     </>
   );
 }
