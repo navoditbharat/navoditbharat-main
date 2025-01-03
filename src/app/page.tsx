@@ -26,6 +26,9 @@ export default function Home() {
           rel="me"
           href="https://www.upwork.com/en-gb/freelancers/~0153f79cc9e470e0cd"
         />
+        <title>
+          Navodit Bharat - Personal Website | Software Engineer & Developer
+        </title>
       </Head>
       <AnimatePresence mode="wait">
         {loading ? (
